@@ -1,0 +1,21 @@
+{
+  "name": "@lib/run",
+  "version": "1.0.0",
+  "description": "Run TypeScript in Node",
+  "license": "0BSD",
+  "author": "Juha Järvi",
+  "homepage": "https://github.com/at-lib/run/#readme",
+  "bugs": {
+    "url": "https://github.com/at-lib/run/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/at-lib/run.git"
+  },
+  "bin": {
+    "run": "run.bat"
+  },
+  "peerDependencies": {
+    "typescript": ">=4"
+  }
+}
