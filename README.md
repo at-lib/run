@@ -2,13 +2,19 @@
 
 Compile and run TypeScript in Node with source map support in under 50 lines of code.
 
-Install:
+Directly run a TypeScript file right now without installing anything but Node:
+
+```bash
+npx @lib/run script.ts
+```
+
+Or install:
 
 ```bash
 npm install --save-dev @lib/run
 ```
 
-Directly run a TypeScript file:
+Then:
 
 ```bash
 npx run script.ts

@@ -1,6 +1,6 @@
 {
   "name": "@lib/run",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Run TypeScript in Node",
   "license": "0BSD",
   "author": "Juha Järvi",
@@ -15,7 +15,7 @@
   "bin": {
     "run": "run.bat"
   },
-  "peerDependencies": {
+  "dependencies": {
     "typescript": ">=4"
   }
 }
