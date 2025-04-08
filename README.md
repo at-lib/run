@@ -1,6 +1,6 @@
 # `@lib/run`
 
-Compile and run TypeScript in Node with source map support in under 50 lines of code.
+Compile and run TypeScript in Node with source map support in about 50 lines of code.
 
 Directly run a TypeScript file right now without installing anything but Node:
 

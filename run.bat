@@ -1,12 +1,20 @@
 echo \" <<'NIX' >/dev/null ">NUL "\"
 @echo off
+setlocal EnableDelayedExpansion
+
+set "root=%~dp0"
+set ^"root=!root:\node_modules\=^
+
+!"
+set root=%root%
+set "NODE_PATH=%root%\node_modules;%NODE_PATH%"
 
 node --enable-source-maps --expose-gc -e "eval(fs.readFileSync(process.argv.at(1), 'utf-8').split('---').pop())" "%~f0" %*
 exit /b %errorlevel%
 
 NIX
 
-/usr/bin/env -S node --enable-source-maps --expose-gc -e "eval(fs.readFileSync(process.argv.at(1), 'utf-8').split('---').pop())" $0 $@
+NODE_PATH="${0%/node_modules/*}/node_modules:$NODE_PATH" /usr/bin/env -S node --enable-source-maps --expose-gc -e "eval(fs.readFileSync(process.argv.at(1), 'utf-8').split('---').pop())" $0 $@
 exit $?
 
 ---

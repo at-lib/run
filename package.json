@@ -1,6 +1,6 @@
 {
   "name": "@lib/run",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Run TypeScript in Node",
   "license": "0BSD",
   "author": "Juha Järvi",
