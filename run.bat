@@ -3,6 +3,7 @@ echo \" <<'NIX' >/dev/null ">NUL "\"
 setlocal EnableDelayedExpansion
 
 set "root=%~dp0"
+rem Hack to split a string.
 set ^"root=!root:\node_modules\=^
 
 !"
@@ -14,6 +15,7 @@ exit /b %errorlevel%
 
 NIX
 
+# NODE_PATH ensures TypeScript is found when running straight from npm repo using npx.
 NODE_PATH="${0%/node_modules/*}/node_modules:$NODE_PATH" /usr/bin/env -S node --enable-source-maps --expose-gc -e "eval(fs.readFileSync(process.argv.at(1), 'utf-8').split('---').pop())" $0 $@
 exit $?
 

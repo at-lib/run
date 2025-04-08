@@ -1,5 +1,7 @@
 # `@lib/run`
 
+[![npm version](https://badgen.net/npm/v/@lib/run)](https://www.npmjs.com/package/@lib/run)
+
 Compile and run TypeScript in Node with source map support in about 50 lines of code.
 
 Directly run a TypeScript file right now without installing anything but Node:
